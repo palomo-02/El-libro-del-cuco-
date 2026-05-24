@@ -1,3 +1,44 @@
 <resources>
     <string name="app_name">El libro del cuco</string>
+    <string name="error_campos_vacios">Por favor, rellena todos los campos</string>
+    <string name="error_passwords_no_coinciden">Las contraseñas no coinciden</string>
+    <string name="cuenta_creada">Cuenta creada con éxito</string>
+    <string name="error_password_min_length">La contraseña debe tener al menos 8 caracteres</string>
+    <string name="error_password_mayuscula">La contraseña debe tener al menos una mayúscula</string>
+    <string name="error_password_numero">La contraseña debe tener al menos un número</string>
+    <string name="error_escaner">Error al escanear el código</string>
+    <string name="sin_resultados">No se encontraron resultados</string>
+    <string name="accion_ver_detalle">👁 Ver detalles del libro</string>
+    <string name="estado_pendiente">📋 Guardar como Pendiente</string>
+    <string name="estado_leyendo">📖 Guardar como Leyendo</string>
+    <string name="estado_leido">✅ Guardar como Leído</string>
+    <string name="estado_quiero_leer">💛 Guardar en Quiero leer</string>
+    <string name="libro_anadido">Libro añadido</string>
+    <string name="error_conexion">Error de conexión</string>
+    <string name="error_parseo">Error al obtener información</string>
+    <string name="usuario_defecto">Usuario</string>
+    <string name="sin_reto">Sin reto establecido</string>
+    <string name="hint_numero_libros">Número de libros</string>
+    <string name="titulo_reto_anual">Establecer Reto Anual</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="editar_nombre">Editar Nombre</string>
+    <string name="nombre_actualizado">Nombre actualizado</string>
+    <string name="foto_actualizada">Foto actualizada</string>
+    <string name="error_subir_foto">Error al subir la foto</string>
+    <!-- Perfil -->
+    <string name="hint_nombre">Tu nombre</string>
+    <string name="cerrar_sesion">Cerrar sesión</string>
+    <string name="confirmar_cerrar_sesion">¿Seguro que quieres cerrar sesión?</string>
+    <string name="confirmar">Confirmar</string>
+    <string name="meta_anual">Meta de lectura anual</string>
+    <string name="objetivo_guardado">Meta guardada</string>
+    <string name="objetivo_invalido">Introduce un número válido</string>
+    <string name="sin_logros">Aún no tienes logros 🌱</string>
+    <string name="eliminar_libro">🗑 Eliminar libro</string>
+    <string name="confirmar_eliminar_titulo">Eliminar libro</string>
+    <string name="confirmar_eliminar_mensaje">¿Eliminar \"%1$s\" de tu biblioteca?</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="libro_eliminado">Libro eliminado</string>
+    <string name="guardian_api_key">test</string>
 </resources>

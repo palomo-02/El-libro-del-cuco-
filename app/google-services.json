@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "436406022533",
+    "project_id": "el-libro-del-cuco",
+    "storage_bucket": "el-libro-del-cuco.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:436406022533:android:6a793f5be0095e414a14ec",
+        "android_client_info": {
+          "package_name": "com.example.ellibrodelcuco"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9Uqr8pT-a-JEZyoywU_PU8WdxTZZec0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

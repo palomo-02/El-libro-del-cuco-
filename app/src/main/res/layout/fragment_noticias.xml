@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF7F2">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarNoticias"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:elevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="12dp"
+            android:paddingHorizontal="20dp"
+            android:background="#FAF7F2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📰 Noticias"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Últimas noticias de libros y literatura"
+                android:textSize="13sp"
+                android:textColor="#888888" />
+
+            <!-- Chips de categoría -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/llChips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipTodos"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Todos"
+                        android:textSize="13sp"
+                        android:checkable="true"
+                        android:checked="true"
+                        app:chipBackgroundColor="@color/selector_chip_background"
+                        app:chipStrokeColor="@color/selector_chip_stroke"
+                        app:chipStrokeWidth="1.5dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipLiteratura"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Literatura"
+                        android:textSize="13sp"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/selector_chip_background"
+                        app:chipStrokeColor="@color/selector_chip_stroke"
+                        app:chipStrokeWidth="1.5dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipBestsellers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Bestsellers"
+                        android:textSize="13sp"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/selector_chip_background"
+                        app:chipStrokeColor="@color/selector_chip_stroke"
+                        app:chipStrokeWidth="1.5dp" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAutores"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="Autores"
+                        android:textSize="13sp"
+                        android:checkable="true"
+                        app:chipBackgroundColor="@color/selector_chip_background"
+                        app:chipStrokeColor="@color/selector_chip_stroke"
+                        app:chipStrokeWidth="1.5dp" />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressBarNoticias"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:indeterminateTint="#8B6914"
+            android:visibility="visible" />
+
+        <!-- Estado vacío / error -->
+        <LinearLayout
+            android:id="@+id/llEstadoVacio"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="32dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📚"
+                android:textSize="56sp" />
+
+            <TextView
+                android:id="@+id/tvMensajeVacio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="No se pudieron cargar las noticias"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#1A1A1A"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Comprueba tu conexión a Internet\ne inténtalo de nuevo"
+                android:textSize="14sp"
+                android:textColor="#888888"
+                android:gravity="center" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReintentar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Reintentar"
+                app:cornerRadius="24dp"
+                android:backgroundTint="#8B6914" />
+
+        </LinearLayout>
+
+        <!-- Lista de noticias -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNoticias"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingTop="8dp"
+            android:paddingBottom="88dp"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
